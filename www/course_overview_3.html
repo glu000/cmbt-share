@@ -4,10 +4,20 @@
 <head>
     <script src="cordova.js"></script>
 
-    <script type="module" src="node_modules/@ionic/core/dist/ionic/ionic.esm.js"></script>
-    <script nomodule src="node_modules/@ionic/core/dist/ionic/ionic.js"></script>
-    <link rel="stylesheet" href="node_modules/@ionic/core/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="lib/jquery.mobile-1.4.5/jquery.js"></script>
+    <script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+
+    <link type="text/css" rel="stylesheet" href="lib/resplist.css">
+    <!-- <link type="text/css" rel="stylesheet" href="lib/main_stylesheet.css"> -->
+
+    <script type="text/javascript">
+        // window.resizeTo(screen.width, screen.height);
+        $.ajaxPrefilter(function(options, original_Options, jqXHR) {
+            options.async = true;
+        });
+    </script>
 
     <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
@@ -20,145 +30,77 @@
         }
     </script>
 
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: auto;
+        }
+    </style>
+
+
 
 </head>
 
-
-
-
-
-
-
-
-
-
 <body>
 
-    <!-- We create a vanilla Javascript function to call the alert -->
-    <script>
-        hello = async function() {
-            window.open("c01/index.html");
+    <div data-role="page" id="demo-page" class="my-page" data-url="demo-page">
+        <div data-role="header" data-position="fixed" class="HeaderClass">
+            <h1>Course Overview</h1>
+            <!-- <a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a> -->
+        </div>
 
-        }
-    </script>
+        <div data-role="footer" data-id="foo1" data-position="fixed" class="FooterClass">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="course_overview.html" data-icon="bars">Category 1</a></li>
+                    <li><a href="course_overview_2.html" data-icon="grid">Category 2</a></li>
+                    <li><a href="course_overview_3.html" data-icon="star">Category 3</a></li>
+                    <!-- <li><a href="d.html" data-icon="grid">Emails</a></li> -->
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
 
-    <!-- We declare an Ionic app using the <ion-app/> element -->
-    <ion-app>
-        <ion-content>
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true" style="-webkit-overflow-scrolling: touch; overflow:auto;">
 
+                <!-- List elements follow here - additional topics are added later-->
 
+                <li>
+                    <a href="c01/index.html" target="_blank">
+                        <img src="img/apple.png" class="ui-li-thumb">
+                        <h2>Course on Topic 1 - Category 3</h2>
+                        <p>Additinal info baourt course</p>
+                        <p class="ui-li-aside">Tag</p>
+                    </a>
+                </li>
 
-
-            <ion-tabs>
-
-
-                <ion-router use-hash="false">
-                    <ion-route url="forward.html" component="music"></ion-route>
-                    <ion-route url="forward.html" component="movies"></ion-route>
-                    <ion-route url="forward.html" component="games"></ion-route>
-                </ion-router>
-
-                <ion-tab tab="music">
-                    <ion-header translucent>
-                        <ion-toolbar>
-                            <ion-title>Music</ion-title>
-                        </ion-toolbar>
-                    </ion-header>
-
-                    <ion-content fullscreen class="ion-padding">
-                        <h1>Music</h1>
-                    </ion-content>
-                </ion-tab>
-
-                <ion-tab tab="movies">
-                    <ion-header translucent>
-                        <ion-toolbar>
-                            <ion-title>Movies</ion-title>
-                        </ion-toolbar>
-                    </ion-header>
-
-                    <ion-content fullscreen class="ion-padding">
-                        <h1>Movies</h1>
-                    </ion-content>
-                </ion-tab>
-
-                <ion-tab tab="games">
-                    <ion-header translucent>
-                        <ion-toolbar>
-                            <ion-title>Games</ion-title>
-                        </ion-toolbar>
-                    </ion-header>
-
-                    <ion-content fullscreen class="ion-padding">
-                        <h1>Games</h1>
-                    </ion-content>
-                </ion-tab>
-
-                <ion-tab-bar slot="bottom">
-                    <ion-tab-button tab="music">
-                        <ion-label>Music</ion-label>
-                        <ion-icon name="musical-note"></ion-icon>
-                    </ion-tab-button>
-                    <ion-tab-button tab="movies">
-                        <ion-label>Movies</ion-label>
-                        <ion-icon name="videocam"></ion-icon>
-                    </ion-tab-button>
-                    <ion-tab-button tab="games">
-                        <ion-label>Games</ion-label>
-                        <ion-icon name="game-controller"></ion-icon>
-                    </ion-tab-button>
-                </ion-tab-bar>
-            </ion-tabs>
-
-            <ion-header>
-                <ion-toolbar>
-                    <ion-title>Header</ion-title>
-                </ion-toolbar>
-            </ion-header>
+                <li>
+                    <a href="c02/index.html" target="_blank">
+                        <img src="img/nexus_7.png" class="ui-li-thumb">
+                        <h2>Course on Topic 2 - Category 3</h2>
+                        <p>Additinal info baourt course</p>
+                        <p class="ui-li-aside">Tag</p>
+                    </a>
+                </li>
 
 
-            <ion-list>
-                <ion-item-sliding>
-                    <ion-item>
-                        <ion-label>xxx</ion-label>
-                    </ion-item>
-                    <ion-item-options side="end">
-                        <ion-item-option onClick="hello()">Unread</ion-item-option>
-                    </ion-item-options>
-                </ion-item-sliding>
 
-                <ion-item-sliding>
-                    <ion-item>
-                        <ion-label>Item</ion-label>
-                    </ion-item>
-                    <ion-item-options side="end">
-                        <ion-item-option onClick="unread(item)">Unread</ion-item-option>
-                    </ion-item-options>
-                </ion-item-sliding>
-            </ion-list>
+            </ul>
+        </div>
+        <!-- /content -->
+    </div>
 
 
-            <!-- Cool thing, the Ionic CSS utilities could be used too -->
 
-            <!-- We add an ion-button with an onclick event -->
-            <ion-button onclick="hello()">Click me</ion-button>
-        </ion-content>
-    </ion-app>
+
+
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </html>

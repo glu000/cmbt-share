@@ -13,21 +13,8 @@
         function onDeviceReady() {
             // Cordova is now initialized. Have fun!
 
-            console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-            console.log('Device ID: ' + device.uuid);
+            window.open("course_overview.html", "_self");
 
-            var storage = window.localStorage;
-
-            var value = storage.getItem("LoggedIn"); 
-
-            if (value == 1)
-            {
-                window.open("course_overview.html", "_self");
-            }
-            else
-            {
-                window.open("login.html", "_self");
-            }
         }
     </script>
 
