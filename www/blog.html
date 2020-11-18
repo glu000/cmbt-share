@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <script src="cordova.js"></script>
+
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="lib/jquery.mobile-1.4.5/jquery.js"></script>
+    <script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <link type="text/css" rel="stylesheet" href="lib/resplist.css">
+    <!-- <link type="text/css" rel="stylesheet" href="lib/main_stylesheet.css"> -->
+
+    <script type="text/javascript">
+        // window.resizeTo(screen.width, screen.height);
+        $.ajaxPrefilter(function(options, original_Options, jqXHR) {
+            options.async = true;
+        });
+    </script>
+
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta charset="utf-8">
+
+    <script>
+        if (window.Intl && typeof window.Intl === 'object') {
+            console.log('API available');
+            console.log(navigator.language);
+        }
+    </script>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: auto;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div data-role="page" data-theme="a" id="demo-page" class="my-page" data-url="demo-page">
+        <div data-role="header" data-position="fixed" class="HeaderClass">
+            <h1>Whitepaper</h1>
+            <!-- <a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a> -->
+        </div>
+
+        <div data-role="footer" data-id="foo1" data-position="fixed" class="FooterClass">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="course_overview_2.html" data-icon="bars">Kurse</a></li>
+                    <li><a href="ml.html" data-icon="grid">Micro-Learnings</a></li>
+                    <li><a href="blog.html" data-icon="star">Whitepaper</a></li>
+                    <!-- <li><a href="d.html" data-icon="grid">Emails</a></li> -->
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+
+        <div role="main" class="ui-content">
+            <br><br><br>
+            <p>Hier kommt später die Seite mit den Whitepapers / Artikeln</p>
+        </div>
+        <!-- /content -->
+    </div>
+
+
+
+
+
+
+</body>
+
+
+</html>

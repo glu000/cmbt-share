@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <script src="cordova.js"></script>
+
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="lib/jquery.mobile-1.4.5/jquery.js"></script>
+    <script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <link type="text/css" rel="stylesheet" href="lib/resplist.css">
+    <!-- <link type="text/css" rel="stylesheet" href="lib/main_stylesheet.css"> -->
+
+    <script type="text/javascript">
+        // window.resizeTo(screen.width, screen.height);
+        $.ajaxPrefilter(function(options, original_Options, jqXHR) {
+            options.async = true;
+        });
+    </script>
+
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta charset="utf-8">
+
+    <script>
+        if (window.Intl && typeof window.Intl === 'object') {
+            console.log('API available');
+            console.log(navigator.language);
+        }
+    </script>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: auto;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div data-role="page" id="demo-page" class="my-page" data-url="demo-page">
+        <div data-role="header" data-position="fixed" class="HeaderClass">
+            <h1>Kursübersicht</h1>
+            <!-- <a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a> -->
+        </div>
+
+        <div data-role="footer" data-id="foo1" data-position="fixed" class="FooterClass">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="course_overview_2.html" data-icon="bars">Kurse</a></li>
+                    <li><a href="ml.html" data-icon="grid">Micro-Learnings</a></li>
+                    <li><a href="blog.html" data-icon="star">Whitepaper</a></li>
+                    <!-- <li><a href="d.html" data-icon="grid">Emails</a></li> -->
+                </ul>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!-- /footer -->
+
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true" style="-webkit-overflow-scrolling: touch; overflow:auto;">
+                <li>
+                    <a href="c01/index.html" target="_blank">
+                        <img src="img/apple.png" class="ui-li-thumb">
+                        <h2>Konfliktmanagement</h2>
+                        <p>AAlles zum Thema abc und xyz</p>
+                        <p class="ui-li-aside">Führung</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="c02/index.html" target="_blank">
+                        <img src="img/blackberry_10.png" class="ui-li-thumb">
+                        <h2>Schwierige Gespräche</h2>
+                        <p>Alles zum Thema abc und xyz</p>
+                        <p class="ui-li-aside">Zusammenarbeit</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/lumia_800.png" class="ui-li-thumb">
+                        <h2>WP 7.8</h2>
+                        <p>Nokia rolls out WP 7.8 to Lumia 800</p>
+                        <p class="ui-li-aside">Windows Phone</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/galaxy_express.png" class="ui-li-thumb">
+                        <h2>Galaxy</h2>
+                        <p>New Samsung Galaxy Express</p>
+                        <p class="ui-li-aside">Samsung</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/nexus_7.png" class="ui-li-thumb">
+                        <h2>Nexus 7</h2>
+                        <p>Rumours about new full HD Nexus 7</p>
+                        <p class="ui-li-aside">Android</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/firefox_os.png" class="ui-li-thumb">
+                        <h2>Firefox OS</h2>
+                        <p>ZTE to launch Firefox OS smartphone at MWC</p>
+                        <p class="ui-li-aside">Firefox</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/tizen.png" class="ui-li-thumb">
+                        <h2>Tizen</h2>
+                        <p>First Samsung phones with Tizen can be expected in 2013</p>
+                        <p class="ui-li-aside">Tizen</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/tizen.png" class="ui-li-thumb">
+                        <h2>Tizen</h2>
+                        <p>First Samsung phones with Tizen can be expected in 2013</p>
+                        <p class="ui-li-aside">Tizen</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/tizen.png" class="ui-li-thumb">
+                        <h2>Tizen</h2>
+                        <p>First Samsung phones with Tizen can be expected in 2013</p>
+                        <p class="ui-li-aside">Tizen</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/tizen.png" class="ui-li-thumb">
+                        <h2>Tizen</h2>
+                        <p>First Samsung phones with Tizen can be expected in 2013</p>
+                        <p class="ui-li-aside">Tizen</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/tizen.png" class="ui-li-thumb">
+                        <h2>Tizen</h2>
+                        <p>First Samsung phones with Tizen can be expected in 2013</p>
+                        <p class="ui-li-aside">Tizen</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/tizen.png" class="ui-li-thumb">
+                        <h2>Tizen</h2>
+                        <p>First Samsung phones with Tizen can be expected in 2013</p>
+                        <p class="ui-li-aside">Tizen</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/tizen.png" class="ui-li-thumb">
+                        <h2>Tizen</h2>
+                        <p>First Samsung phones with Tizen can be expected in 2013</p>
+                        <p class="ui-li-aside">Tizen</p>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /content -->
+    </div>
+
+
+
+
+
+
+</body>
+
+
+</html>

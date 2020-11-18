@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <script src="cordova.js"></script>
+    <link type="text/css" rel="stylesheet" href="lib/main_stylesheet.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        document.addEventListener('deviceready', onDeviceReady, false);
+
+        function onDeviceReady() {
+            // Cordova is now initialized. Have fun!
+
+            console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
+            console.log('Device ID: ' + device.uuid);
+
+            var storage = window.localStorage;
+
+            var value = storage.getItem("LoggedIn"); 
+
+            if (value == 1)
+            {
+                window.open("course_overview.html", "_self");
+            }
+            else
+            {
+                window.open("login.html", "_self");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+
+</html>

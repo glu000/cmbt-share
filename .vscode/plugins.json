@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-itsappusesnonexemptencryption","cordova-plugin-advanced-http","cordova-plugin-file","cordova-plugin-device","cordova-plugin-statusbar","cordova-plugin-wkwebview-file-xhr","cordova-plugin-browsersync","cordova-plugin-browsersync-gen2"]}
